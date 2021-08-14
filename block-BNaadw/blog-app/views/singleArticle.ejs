@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <% include partial/header %> 
+    <main>
+        <section class="detail-article">
+            <ul>
+                <li>
+                    <%= articles.title %> 
+                </li>
+                <li>
+                    <%= articles.description %>  
+                </li>
+                <li>
+                    <%= articles.likes ? article.likes = 0 %> 
+
+                    <a href="/articles/<%= articles.id %> /likes">
+                        <button>
+                            Like
+                        </button>
+                    </a>
+                </li>
+            </ul>
+            <a href="/articles/<%= articles.id %> /delete">
+                <button>
+                    Delete
+                </button>
+            </a>
+            <a href="/articles/<%= articles.id %>/edit">
+                <button>
+                    Edit
+                </button>
+            </a>
+            <form action="/articles/<%= article.id %>/comment " method="POST">
+                <input type="text" name="author" placeholder="Author Name">
+                <textarea name="comment" id="" cols="30" rows="10" placeholder="Comment">
+
+                </textarea>
+                <button type="submit">
+                    Submit
+                </button>
+            </form>
+        </section>
+    </main>
+    <% include partial/footer %>  
+</body>
+</html>
