@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% include partial/header %>
+    <main>
+      <section class="index-page">
+        <div class="container">
+          <a href="/users/login">
+            Login
+          </a>
+          <a href="/users/register">
+            Register
+          </a>
+          <a href="/articles/">
+            Articles
+          </a>
+        </div>
+      </section>
+    </main>
+    <% include partial/footer %>
+  </body>
+</html>

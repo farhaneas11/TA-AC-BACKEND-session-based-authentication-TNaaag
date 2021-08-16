@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <% include partial/header %> 
+    <main>
+        <section class="login-page container">
+            <% if(error) { %> 
+                <p> <%= error %> </p>
+             <% } %>
+            <form action="/users/login" method="POST">
+                <input type="email" name="email" placeholder="Email" autocomplete="off">
+                <input type="password" name="password" placeholder="Password">
+                <button type="submit">
+                    Login
+                </button>
+            </form>
+        </section>
+    </main>
+    <% include partial/footer %> 
+</body>
+</html>
